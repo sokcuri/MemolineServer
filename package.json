@@ -1,0 +1,12 @@
+{
+  "name": "somatter",
+  "dependencies": {
+    "domain": "0.0.1",
+    "http": "0.0.0",
+    "nedb": "^1.8.0",
+    "oauth": "^0.9.14",
+    "sha1": "^1.1.1",
+    "twitter": "^1.3.0",
+    "url": "^0.11.0"
+  }
+}
