@@ -80,7 +80,7 @@ serverDomain.run(() => {
 		req.on('end', () => {
 			route.route(req, res, body);
 		});
-	}).listen(8080);
+	}).listen(80);
 });
 
 /*
