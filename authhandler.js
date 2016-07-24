@@ -1,6 +1,5 @@
 /** memohandler.js **/
 var url = require('url');
-var Twitter = require('Twitter');
 var Datastore = require('nedb');
 var db = global.db.auth;
 var querystring = require('querystring');
