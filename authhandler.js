@@ -58,7 +58,7 @@ exports.request_token = function(req, res, body) {
 	consumerSecret = getConsumerSecret();
 	OAuth._consumerKey = consumerKey;
 	OAuth._consumerSecret = consumerSecret;
-	OAuth._authorize_callback = "http://192.168.10.12:8080/auth/callback";
+	OAuth._authorize_callback = "http://memoline.neko.kr/auth/callback";
 	OAuth.getOAuthRequestToken((error, oauth_token, oauth_token_secret, results) => {
 		if (error)
 		{
