@@ -14,7 +14,7 @@ exports.create = function (req, res, body) {
 };
 
 exports.read = function(req, res) {
-	_findMemo({}, function(error, results) {
+	_findMemo(req, {}, function(error, results) {
 		res.writeHead(200, {"Content-Type": "application/json"});
 		res.write(JSON.stringify(results, null, 2));
 		res.end();
@@ -53,8 +53,12 @@ function _insertMemo(body, callback) {
 	db.insert(content, callback);
 }
 
-function _findMemo(where, callback) {
-	where = where || {};
+function _findMemo(req, where, callback) {
+    var query = url.parse(req.url).query;
+    var q = querystring.parse(query);
+    _chkParam([[q.user_token, 261], [q.user_secret, 262]]);
+    where['user_token'] = q.user_token;
+    where['user_secret'] = q.user_secret;
 	db.find(where).sort({date: -1 }).exec(callback);
 }
 

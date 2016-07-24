@@ -76,7 +76,7 @@ exports.request_token = function(req, res, body) {
 					throw 156;
 
 				printJSON(res, 200, {"oauth_token": oauth_token, "oauth_token_secret": oauth_token_secret,
-					"authorize_url": 'https://twitter.com/oauth/authenticate?oauth_token=' + oauth_token});
+					"authorize_url": 'https://twitter.com/oauth/authenticate?force_login=true&oauth_token=' + oauth_token});
 			});
 		}
 	});
