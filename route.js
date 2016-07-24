@@ -1,7 +1,7 @@
 /** route.js **/
-var memoHandler = require('./memoHandler.js');
-var userHandler = require('./userHandler.js');
-var authHandler = require('./authHandler.js');
+var memoHandler = require('./memohandler.js');
+var userHandler = require('./userhandler.js');
+var authHandler = require('./authhandler.js');
 var url = require('url');
 
 exports.route = (function() {
